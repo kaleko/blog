@@ -4,7 +4,7 @@ from __future__ import unicode_literals
 
 AUTHOR = u'David Kaleko'
 SITENAME = u'From Neutrinos to Data Science: A Blog That Needs a Better Title'
-SITEURL = 'kaleko.github.io/blog'
+SITEURL = ''
 
 PATH = 'content'
 THEME = 'pelican-clean-blog'
