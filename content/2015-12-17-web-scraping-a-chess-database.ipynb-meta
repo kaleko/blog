@@ -1,0 +1,7 @@
+Title: Web Scraping to Create a Custom Chess Games Database
+Slug: web-scraping-chess-games
+Date: 2015-12-17
+Tags: webscraping, BeautifulSoup
+Author: David Kaleko
+Summary: I use BeautifulSoup to scrape an online chess games database for games matching a specific query. I've got a game to play tonight, so I need to get this done fast!
+Headline: Scraping an Online Chess Games Database; Paywalls are for the Weak!
