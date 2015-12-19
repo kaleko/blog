@@ -3,7 +3,9 @@
 from __future__ import unicode_literals
 
 AUTHOR = u'David Kaleko'
-SITENAME = u'From Neutrinos to Data Science: A Blog That Needs a Better Title'
+HOMEPAGEURL = 'http://davidkaleko.com'
+SITENAME = u'From Neutrinos to Data Science'
+SITESUBTITLE = u'A Blog that Needs a Better Title'
 SITEURL = ''
 
 PATH = 'content'
