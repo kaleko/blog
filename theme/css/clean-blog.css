@@ -146,6 +146,7 @@ hr.small {
   background-size: cover;
   -o-background-size: cover;
   margin-bottom: 50px;
+  background-position: center center;
 }
 .intro-header .site-heading,
 .intro-header .post-heading,
@@ -186,6 +187,7 @@ hr.small {
 }
 .intro-header .post-heading h1 {
   font-size: 35px;
+  text-align: center;
 }
 .intro-header .post-heading .subheading,
 .intro-header .post-heading .meta {
@@ -197,6 +199,7 @@ hr.small {
   font-size: 24px;
   margin: 10px 0 30px;
   font-weight: 600;
+  text-align: center;
 }
 .intro-header .post-heading .meta {
   font-family: 'Lora', 'Times New Roman', serif;
@@ -210,9 +213,11 @@ hr.small {
 @media only screen and (min-width: 768px) {
   .intro-header .post-heading h1 {
     font-size: 55px;
+    text-align: center;
   }
   .intro-header .post-heading .subheading {
     font-size: 30px;
+    text-align: center;
   }
 }
 .post-preview > a {
