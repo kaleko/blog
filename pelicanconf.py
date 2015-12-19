@@ -12,7 +12,7 @@ PATH = 'content'
 THEME = 'pelican-clean-blog'
 
 TIMEZONE = 'America/Chicago'
-STATIC_PATHS = [ 'CNAME' ]
+STATIC_PATHS = [ 'images', 'CNAME' ]
 
 DEFAULT_LANG = u'en'
 
@@ -50,3 +50,6 @@ COLOR_SCHEME_CSS = 'github.css'
 #others: tomorrow.css, tomorrow_night.css, monokai.css, github.css, darkly.css
 
 #todo: GOOGLE_ANALYTICS
+
+# Top Menu Links
+MENUITEMS = (( 'davidkaleko.com', 'http://davidkaleko.com' ),)
