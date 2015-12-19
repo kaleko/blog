@@ -12,6 +12,7 @@ PATH = 'content'
 THEME = 'pelican-clean-blog'
 
 TIMEZONE = 'America/Chicago'
+STATIC_PATHS = [ 'CNAME' ]
 
 DEFAULT_LANG = u'en'
 
