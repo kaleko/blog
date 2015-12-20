@@ -50,7 +50,7 @@ FACEBOOK_URL = 'http://facebook.com/davidkaleko'
 COLOR_SCHEME_CSS = 'github.css'
 #others: tomorrow.css, tomorrow_night.css, monokai.css, github.css, darkly.css
 
-#todo: GOOGLE_ANALYTICS
+GOOGLE_ANALYTICS = 'UA-71585052-1'
 
 # Top Menu Links
 MENUITEMS = (( 'davidkaleko.com', 'http://davidkaleko.com' ),)
