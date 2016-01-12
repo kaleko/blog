@@ -1,0 +1,7 @@
+Title: From-Scratch Logistic Regression in Particle Physics Event Selection
+Slug: log-regression-particle-physics-event-selection
+Date: 2016-01-11
+Tags: machinelearning, particlephysics, neutrino, logisticregression
+Author: David Kaleko
+Summary: I'm taking the Andrew Ng Machine Learning course on Coursera and I found a way to apply simple logistic regression to my thesis work. I found two variables computed that describe something about a specific class of particle physics events I'm searching for, and I use logistic regression to determine (based on these variables) whether an event is one in which I'm interested, or is a background event I want to reject.
+Headline: Machine Learning in Particle Physics; How Copy-Pasting my Coursera Machine Learning Homework Greatly Improved my Thesis Anslysis
