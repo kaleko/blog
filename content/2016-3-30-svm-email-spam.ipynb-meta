@@ -1,0 +1,7 @@
+Title: Implementing a Support Vector Machine E-Mail Spam Classification Filter
+Slug: svm-email-filter-implementation
+Date: 2016-3-30
+Tags: svm, sklearn, classification
+Author: David Kaleko
+Summary: Inspired by a Coursera Machine Learning homework assigment, I implement a support vector machine e-mail spam classification filter. I use a dataset from the web of sample spam and non-spam e-mails and evaluate the performance of an SVM model on a test subset.
+Headline: Support Vector Machines as E-Mail Spam Classification Filters; Never Get Spammed Again!
