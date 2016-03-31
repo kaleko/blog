@@ -50,7 +50,7 @@
 	<meta property="og:title" content="Implementing a Support Vector Machine E-Mail Spam Classification Filter">
 	<meta property="og:description" content="Never Get Spammed Again!">
 	<meta property="og:image" content="/">
-	<meta property="article:published_time" content="2016-03-30 00:00:00-05:00">
+	<meta property="article:published_time" content="2016-03-31 00:00:00-05:00">
 </head>
 
 <body>
@@ -92,7 +92,7 @@
                             <h3 class="subheading">Never Get Spammed Again!</h3>
                         <span class="meta">Posted by
                                 <a href="http://davidkaleko.com/#about">David Kaleko</a>
-                             on Wed 30 March 2016
+                             on Thu 31 March 2016
                         </span>
                         
                     </div>
@@ -682,9 +682,9 @@ xNj/A19/p20/fvodAAAAAElFTkSuQmCC
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>As you can see, logistic regression cost functions are continuous functions involving logs of exponentials while SVMs use simple piecewise linear costs terms. This provides the computational advantage to SVMs that I mentioned earlier.</p>
+<p>As you can see, logistic regression cost functions are continuous functions involving logs of exponentials while SVMs use simple piecewise linear cost terms. This provides the computational advantage to SVMs that I mentioned earlier.</p>
 <p>I'll also note that this piecewise cost structure is what makes an SVM a <em>large margin classifier</em>, something which I won't describe in detail but I'll just note that this makes the decision boundary computed by an SVM more robust. I highly suggest checking out the aforementioned Coursera machine learning course in which Andrew Ng steps through the math behind large margin classifiers (though he marks it as "optional" because he uses vector scalar products in his derivation... cakewalk for a physicist!).</p>
-<p>Another similarity SVMs have to logistic regressions is that they can be regularized to help find a balance between underfitting (high bias) and overfitting (high variance) the data. While in logistic regressions the regularization parameter is often called lambda, in SVMs the letter <em>C</em> is often used... note that <em>C</em> is analogous to the <em>inverse</em> of lambda. The best way to choose the value of <em>C</em> that finds the middleground between underfitting and overfitting the data is to split up your data sample in to three groups: training, cross validation, and test. More on this below when I start actually implementing an SVM!</p>
+<p>Another similarity SVMs have to logistic regressions is that they can be regularized to help find a balance between underfitting (high bias) and overfitting (high variance) the data. While in logistic regressions the regularization parameter is often called $\lambda$, in SVMs the letter $C$ is often used... note that $C$ is analogous to the <em>inverse</em> of $\lambda$. The best way to choose the value of $C$ that finds the middleground between underfitting and overfitting the data is to split up your data sample in to three groups: training, cross validation, and test. More on this below when I start actually implementing an SVM!</p>
 </div>
 </div>
 </div>
@@ -709,7 +709,7 @@ xNj/A19/p20/fvodAAAAAElFTkSuQmCC
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [2]:</div>
+<div class="prompt input_prompt">In [3]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">Image</span>
@@ -720,7 +720,7 @@ xNj/A19/p20/fvodAAAAAElFTkSuQmCC
 </div>
 <div class="output_wrapper">
 <div class="output">
-<div class="output_area"><div class="prompt output_prompt">Out[2]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[3]:</div>
 <div class="output_png output_subarea output_execute_result">
 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAmcAAAGJCAYAAADPFJR+AAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
 AAALEgAACxIB0t1+/AAAIABJREFUeJzsnXd4VMX6x7+z9IQO0ksoSSgGEgKIGEgEpSsIIuVeZAFR
@@ -1643,7 +1643,7 @@ DMMwjBBh4swwDMMwDCNE/D9/lR2CZ+ziqwAAAABJRU5ErkJggg==
 <li>Read in the e-mails.</li>
 <li>Preprocess the e-mails to turn their text into a format an SVM can understand.</li>
 <li>Subdivide the e-mails into the three sets (training, CV, test).</li>
-<li>Initialize an SVM, try different values of the <em>C</em> parameter, training the SVM on the training set each time.</li>
+<li>Initialize an SVM, try different values of the $C$ parameter, training the SVM on the training set each time.</li>
 <li>Run each trained SVM on the cross validation set and determine which value of $C$ is most appropriate.</li>
 <li>Run the best trained SVM on the test set and report how well it worked.</li>
 </ol>
@@ -1661,7 +1661,7 @@ DMMwjBBh4swwDMMwDCNE/D9/lR2CZ+ziqwAAAABJRU5ErkJggg==
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [3]:</div>
+<div class="prompt input_prompt">In [4]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="kn">import</span> <span class="nn">os</span>
@@ -1789,7 +1789,7 @@ Your use of Yahoo! Groups is subject to http://docs.yahoo.com/info/terms/
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [4]:</div>
+<div class="prompt input_prompt">In [5]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="k">for</span> <span class="n">nonspam_email</span> <span class="ow">in</span> <span class="n">nonspam_emails</span><span class="p">:</span>
@@ -1838,7 +1838,7 @@ mv 108 00108.4506c2ef846b80b9a7beb90315b227
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [5]:</div>
+<div class="prompt input_prompt">In [6]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="n">spam_emails</span> <span class="o">=</span> <span class="n">spam_emails</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span>
@@ -1858,7 +1858,7 @@ mv 108 00108.4506c2ef846b80b9a7beb90315b227
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [6]:</div>
+<div class="prompt input_prompt">In [7]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="n">nonspam_emails</span> <span class="o">=</span> <span class="p">[</span> <span class="n">email</span><span class="p">[</span><span class="n">email</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s">'</span><span class="se">\n\n</span><span class="s">'</span><span class="p">)</span><span class="o">+</span><span class="mi">4</span><span class="p">:]</span> <span class="k">for</span> <span class="n">email</span> <span class="ow">in</span> <span class="n">nonspam_emails</span> <span class="p">]</span>
@@ -1879,7 +1879,7 @@ mv 108 00108.4506c2ef846b80b9a7beb90315b227
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [7]:</div>
+<div class="prompt input_prompt">In [8]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="kn">import</span> <span class="nn">re</span> <span class="c">#regular expression for e-mail processing</span>
@@ -1927,7 +1927,7 @@ mv 108 00108.4506c2ef846b80b9a7beb90315b227
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [8]:</div>
+<div class="prompt input_prompt">In [9]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="kn">import</span> <span class="nn">nltk</span><span class="o">,</span> <span class="nn">nltk.stem.porter</span>
@@ -1973,7 +1973,7 @@ mv 108 00108.4506c2ef846b80b9a7beb90315b227
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>After an e-mail is handed to this function, <em>email2TokenList</em>, what comes out is a list of stemmed words. However, the number of unique stemmed words throughout all of the e-mails is very large... perhaps too large for each unique stemmed word to be used as a feature for the SVM to consider when it attempts to classify an e-mail as spam or non-spam. Also, words that occur very rarely in the training set might only occur in a few e-mails, which could lead to overfitting the data set. To handle these two problems, I'll do the following: loop over all the e-mails (spam, and non-spam) and take the 500 most common words overall as my vocabulary list.</p>
+<p>After an e-mail is handed to this function, <em>email2TokenList</em>, what comes out is a list of stemmed words. However, the number of unique stemmed words throughout all of the e-mails is very large... perhaps too large for each unique stemmed word to be used as a feature for the SVM to consider when it attempts to classify an e-mail as spam or non-spam. Also, words that occur very rarely in the training set might only occur in a few e-mails, which could lead to overfitting the data set. To handle these two problems, I'll do the following: loop over all the e-mails (spam, and non-spam) and take the 1000 most common words overall as my vocabulary list.</p>
 </div>
 </div>
 </div>
@@ -1982,13 +1982,13 @@ mv 108 00108.4506c2ef846b80b9a7beb90315b227
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>I accomplish this in a somewhat hacky way. I concatenate all emails to form one giant e-mail, tokenize and stem it, and use function from within the <a href="https://docs.python.org/2/library/collections.html">collections module</a> to count the number of occurrences of each word. I'll make a collections.Counter object, which is a high performance python container with super useful functionality like the <em>most_common(N)</em> function, which returns the <em>N</em> most common tokens in the collection. I.E. exactly what I want!</p>
+<p>I accomplish this in a somewhat hacky way. I concatenate all emails to form one giant e-mail, tokenize and stem it, and use a function from within the <a href="https://docs.python.org/2/library/collections.html">collections module</a> to count the number of occurrences of each word. I'll make a collections.Counter object, which is a high performance python container with super useful functionalities like the <em>most_common(N)</em> function, which returns the <em>N</em> most common tokens in the collection. I.E. exactly what I want!</p>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [9]:</div>
+<div class="prompt input_prompt">In [10]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="n">giant_nonspam_email</span> <span class="o">=</span> <span class="p">[</span> <span class="s">' '</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">nonspam_emails</span><span class="p">[:])</span> <span class="p">]</span>
@@ -2001,7 +2001,7 @@ mv 108 00108.4506c2ef846b80b9a7beb90315b227
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [10]:</div>
+<div class="prompt input_prompt">In [11]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">Counter</span>
@@ -2013,7 +2013,7 @@ mv 108 00108.4506c2ef846b80b9a7beb90315b227
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [11]:</div>
+<div class="prompt input_prompt">In [12]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="k">print</span> <span class="s">'The total number of unique stemmed tokens is: '</span>
@@ -2049,7 +2049,7 @@ The ten most common stemmed tokens are:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [12]:</div>
+<div class="prompt input_prompt">In [13]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="n">common_words</span> <span class="o">=</span> <span class="p">[</span> <span class="nb">str</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">word_counts</span><span class="o">.</span><span class="n">most_common</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span> <span class="p">]</span>
@@ -2064,13 +2064,13 @@ The ten most common stemmed tokens are:
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Up next is converting each e-mail into a list of these indices, then further converting that into a feature vector of shape (1000, 1). This vector will contain only 1's and 0's... for example, if the e-mail has only three words whose indices in the vocab_dict are 3, 9, 14, then the 3rd, 9th, and 14th element of the vector will be 1's while the other 4997 elements in the vector will be 0's.</p>
+<p>Up next is converting each e-mail into a list of these indices, then further converting that into a feature vector of shape (1000, 1). This vector will contain only 1's and 0's... for example, if the e-mail has only three words whose indices in the vocab_dict are 3, 9, 14, then the 3rd, 9th, and 14th element of the vector will be 1's while the other 997 elements in the vector will be 0's.</p>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [13]:</div>
+<div class="prompt input_prompt">In [15]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="k">def</span> <span class="nf">email2VocabIndices</span><span class="p">(</span> <span class="n">raw_email</span><span class="p">,</span> <span class="n">vocab_dict</span> <span class="p">):</span>
@@ -2134,7 +2134,7 @@ The ten most common stemmed tokens are:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [15]:</div>
+<div class="prompt input_prompt">In [16]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c">#Build the training X matrix and y vector</span>
@@ -2193,14 +2193,14 @@ The ten most common stemmed tokens are:
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Now we have our training set, our cross-validation set, and our test set finally in the format we want.</p>
-<p>As a reminder, the purpose of the cross-validation set was to use it to choose our parameter, <em>C</em> without baising ourselves when we report our final performance on the test set.</p>
-<p>Let's create several instances of sklearn linear kernel SVM's, each with a different <em>C</em> parameter. We'll train each on the training set and evaluate the performance of each on the cross-validation set. Finally, we'll choose the instance with the best performance and run it on the test set to see how well our model works!</p>
+<p>As a reminder, the purpose of the cross-validation set was to use it to choose our parameter, $C$ without baising ourselves when we report our final performance on the test set.</p>
+<p>Let's create several instances of sklearn linear kernel SVM's, each with a different $C$ parameter. We'll train each on the training set and evaluate the performance of each on the cross-validation set. Finally, we'll choose the instance with the best performance and run it on the test set to see how well our model works!</p>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [16]:</div>
+<div class="prompt input_prompt">In [17]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">svm</span> <span class="c">#SVM software</span>
@@ -2235,7 +2235,7 @@ The ten most common stemmed tokens are:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [17]:</div>
+<div class="prompt input_prompt">In [18]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">5</span><span class="p">))</span>
@@ -2656,14 +2656,14 @@ SQAAAABJRU5ErkJggg==
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Here we can see that the performance on the training set improves as <em>C</em> increases. With a small <em>C</em> value, we are underfitting the training set and therefore the performance on the CV set is bad. With a large <em>C</em> value, we are likely overfitting the training set as seen by the above blue curve. A good intermediate <em>C</em> value can be extracted from the red curve on the above plot. Any value between 0.001 and 1 are acceptable, but above that point the CV set error begins increasing again due to overfitting. <strong>Let's go with a <em>C</em> value of 0.1.</strong></p>
+<p>Here we can see that the performance on the training set improves as $C$ increases. With a small $C$ value, we are underfitting the training set and therefore the performance on the CV set is bad. With a large $C$ value, we are likely overfitting the training set as seen by the above blue curve. A good intermediate $C$ value can be extracted from the red curve on the above plot. Any value between 0.001 and 1 are acceptable, but above that point the CV set error begins increasing again due to overfitting. <strong>Let's go with a $C$ value of 0.1.</strong></p>
 <p>Huzzah! Let's see how well we perform on the test set!</p>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [18]:</div>
+<div class="prompt input_prompt">In [19]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="n">best_svm</span> <span class="o">=</span> <span class="n">svm</span><span class="o">.</span><span class="n">SVC</span><span class="p">(</span><span class="n">C</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">kernel</span><span class="o">=</span><span class="s">'linear'</span><span class="p">)</span>
