@@ -1,0 +1,7 @@
+Title: Quantifying Crossword Difficulty: Are Monday Puzzles Harder Than Tuesday?
+Slug: crossword-difficulty-quantificiation
+Date: 2016-7-8
+Tags: webscraping, python, scipy, stats
+Author: David Kaleko
+Summary: A college friend of mine and I keep in touch by periodically doing L.A. Times daily crossword puzzles. They are supposed to increase in difficulty throughout the week, but we always seem to struggle more with Monday puzzles than with Tuesday puzzles. It's time to put an end to the mystery!
+Headline: Are Monday puzzles really harder than Tuesday puzzles?
