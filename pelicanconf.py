@@ -46,6 +46,7 @@ PLUGINS = ['ipynb']
 GITHUB_URL = 'http://github.com/kaleko'
 TWITTER_URL = 'http://twitter.com/davidkaleko'
 FACEBOOK_URL = 'http://facebook.com/davidkaleko'
+LINKEDIN_URL = 'https://www.linkedin.com/in/davidkaleko'
 
 COLOR_SCHEME_CSS = 'github.css'
 #others: tomorrow.css, tomorrow_night.css, monokai.css, github.css, darkly.css
