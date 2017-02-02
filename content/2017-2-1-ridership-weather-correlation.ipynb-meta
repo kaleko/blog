@@ -1,0 +1,7 @@
+Title: Merging Data Sets: Uncovering Temperature Correlations in Chicago Bus Ridership
+Slug: merging-data-sets-pandas
+Date: 2017-2-1
+Tags: sql, pandas, merge, join
+Author: David Kaleko
+Summary: I demonstrate the ability for pandas to perform SQL-like joins between disparate data sets! I merge together some data describing Chicago public bus ridership and daily temperature data from the National Oceanic and Atmospheric Administration (NOAA) by performing an inner join on datetime objects. With some simple analysis, I show that some bus routes are indeed strongly correlated with temperature, while others are not.
+Headline: Using Pandas Built-In SQL-Like Commands to Join Disparate Data Sets
