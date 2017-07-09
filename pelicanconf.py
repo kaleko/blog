@@ -41,7 +41,7 @@ LOAD_CONTENT_CACHE = False
 
 MARKUP = ('md', 'ipynb')
 PLUGIN_PATHS = ['plugins']
-PLUGINS = ['ipynb']#,'disqus_static']
+PLUGINS = ['ipynb']
 
 GITHUB_URL = 'http://github.com/kaleko'
 TWITTER_URL = 'http://twitter.com/davidkaleko'
@@ -58,5 +58,3 @@ MENUITEMS = (( 'davidkaleko.com', 'http://davidkaleko.com' ),)
 
 # Disqus comments
 DISQUS_SITENAME = "kalekoblog"
-#DISQUS_SECRET_KEY = 'xSGldvwNkJDntt5kAjMN6ALgYz2eYzXU0mXAFwDdDB3MVSOuowozjX8Hu5zI3unv'a
-#DISQUS_PUBLIC_KEY = 'W5UAbDHtbjaTYriyT7r4F6IybFuYjgmWIC6QLil8f4PeLhT1PaW40Qh8A4yvpole'
