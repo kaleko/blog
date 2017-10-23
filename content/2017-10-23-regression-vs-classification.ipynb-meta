@@ -1,0 +1,7 @@
+Title: Fundamental Concept Review: Regression vs. Classification
+Slug: fundamentals-regression-classification
+Date: 2017-10-23
+Tags: classification, regression, fundamentals, machinelearning
+Author: David Kaleko
+Summary: It's a common misconception that regression problems output continuous values and classification problems are just regression problems with thresholds applied. This post clarifies the fundamental difference between these two very important pillars of the supervised learning space!
+Headline: Regression vs. Classification: Do you know the difference?
