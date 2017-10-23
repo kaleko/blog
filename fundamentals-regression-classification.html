@@ -49,7 +49,7 @@
 	<meta property="article:author" content="">
 	<meta property="og:url" content="http://blog.davidkaleko.com/fundamentals-regression-classification.html">
 	<meta property="og:title" content="Fundamental Concept Review - Regression vs. Classification">
-	<meta property="og:description" content="Regression vs. Classification - Do you know the difference?">
+	<meta property="og:description" content="Do you know the difference?">
 	<meta property="og:image" content="http://blog.davidkaleko.com/">
 	<meta property="article:published_time" content="2017-10-23 00:00:00-05:00">
 </head>
@@ -90,7 +90,7 @@
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                     <div class="post-heading">
                         <h1>Fundamental Concept Review - Regression vs. Classification</h1>
-                            <h3 class="subheading">Regression vs. Classification - Do you know the difference?</h3>
+                            <h3 class="subheading">Do you know the difference?</h3>
                         <span class="meta">Posted by
                                 <a href="http://davidkaleko.com/#about">David Kaleko</a>
                              on Mon 23 October 2017
@@ -180,20 +180,10 @@
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Fundamental-Concept-Review:-Classification-vs.-Regression">Fundamental Concept Review: Classification vs. Regression<a class="anchor-link" href="#Fundamental-Concept-Review:-Classification-vs.-Regression">¶</a></h2>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Many people new to machine learning start doing some research and quickly ask one of the most important fundamental questions to understand about supervised learning problems:</p>
-<h3 id="What's-the-difference-between-classification-and-regression?"><em>What's the difference between classification and regression?</em><a class="anchor-link" href="#What's-the-difference-between-classification-and-regression?">¶</a></h3><p>The first answer google provides (for me, anyway) comes from <a href="https://math.stackexchange.com/questions/141381/regression-vs-classification">math.stackexchange</a> and it answers succinctly:</p>
+<p>Many people new to machine learning start doing some research and quickly learn to ask one of the most important fundamental questions to understand about supervised learning problems:</p>
+<h3 id="What's-the-difference-between-regression-and-classification?"><em>What's the difference between regression and classification?</em><a class="anchor-link" href="#What's-the-difference-between-regression-and-classification?">¶</a></h3><p>The first answer google provides (for me, anyway) comes from <a href="https://math.stackexchange.com/questions/141381/regression-vs-classification">math.stackexchange</a> and it answers succinctly:</p>
 <pre><code>Regression: the output variable takes continuous values.
 Classification: the output variable takes class labels.
-
 </code></pre>
 <p>Great! We're done. Shortest block post ever!</p>
 </div>
@@ -206,7 +196,7 @@ Classification: the output variable takes class labels.
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Just kidding.</strong></p>
 <p>While that stackexchange answer is indeed true, and is indeed generally a sufficient explanation for someone in perhaps a managerial or executive role, it is most definitely <em>insufficient</em> for someone working closey with machine learning.</p>
-<p>It turns out, both regression and classification problems end up computing continuous values. Why then can't we take a regression problem, slap a threshold on the output (i.e. all predictions above 50 are labeled "1" and all predictions below 50 are labeled "0"), and call it a classification problem? <strong>Regression problems and classification problems are <em>fundamentally different</em> beasts.</strong> Regression problems are predicting a continuous value, while classification problems are predicting the class to which a point belongs.</p>
+<p>It turns out, both regression and classification problems end up computing continuous values. Why then can't we take a regression problem, slap a threshold on the output (i.e. all predictions above 50 are labeled "1" and all predictions below 50 are labeled "0"), and call it a classification problem? <strong>Regression problems and classification problems are <em>fundamentally different</em> beasts.</strong></p>
 </div>
 </div>
 </div>
@@ -215,8 +205,8 @@ Classification: the output variable takes class labels.
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Minimizing-Cost-Functions">Minimizing Cost Functions<a class="anchor-link" href="#Minimizing-Cost-Functions">¶</a></h3><p>Both regression and classification algorithms are at their core minimizing a cost function, $J$. They do this by taking some training data, forming a hypothesized prediction prediction ($h_\theta$, where $\theta$ represents the parameters that define the model) for each point, and determining how wrong that prediction is by comparing it to a true label, $y$. How wrong the prediction was is called the <strong>cost</strong>.</p>
-<p>Take for example the case of basic linear regression: the cost is the summed squared difference between $h_\theta$ and $y$ for all $m$ training points.</p>
+<h3 id="Minimizing-Cost-Functions">Minimizing Cost Functions<a class="anchor-link" href="#Minimizing-Cost-Functions">¶</a></h3><p>Both regression and classification algorithms are at their core minimizing a cost function, $J$. They do this by taking some training data, forming a hypothesized predicted value $h_\theta$ (where $\theta$ represents the parameters that define the model) for each point, and determining how wrong that prediction is by comparing it to a true label, $y$. How wrong the prediction was is called the <strong>cost</strong>.</p>
+<p>Take for example the case of basic linear regression: the cost is the summed squared difference between $h_\theta$ and $y$ for all $m$ training points. If the value the model predicts is far from the true value in the training set, the cost is high; if the model predicts the value perfectly, the cost is low (zero).</p>
 <p><img alt="Cost Function for linear regression." src="images/linreg_cost.png" /></p>
 <p>The model tries one set of parameters $\theta$, computes the cost, then tries another set of parameters, computes the cost, and continues until it finds the set of parameters that result in the smallest cost (algorithms generally do this parameter tuning in a smart way, often via <a href="https://en.wikipedia.org/wiki/Gradient_descent">Gradient Descent</a>).</p>
 </div>
@@ -231,7 +221,7 @@ Classification: the output variable takes class labels.
 <p>In a regression problem, the hypothesis $h_\theta$ can be <em>any real valued number</em>, from negative infinity to infinity. The labels, $y$ are similarly real valued. The cost function is just comparing $h_\theta$ to $y$ in some way (i.e. squared difference).</p>
 <p>In a classification problem, the hypothesis is still real valued, but <em>forced to be between 0 and 1</em>. It's generally forced this way by passing a fully real-valued hypothesis through a <a href="https://en.wikipedia.org/wiki/Sigmoid_function">sigmoid function</a>. What about the cost function for a binary classification problem?</p>
 <p><strong><strong>The cost function for a classification problem changes depending on the true label.</strong></strong></p>
-<p>This is the fundamental difference between regression and binary classification problems. In a binary classification problem, the cost function when the label is 1 is something like $-log(h_\theta)$ while when the label is 0 it's something like $-log(1-h_\theta)$. That is, if the true label $y$ is 1, the cost is zero (good!) if the prediction, $h_\theta$ is 1. However, the cost goes to infinity the farther from 1 (closer to zero) $h_\theta$ is! The opposite is true if the true label $y$ is 0. <strong>This is what constitutes the fundamental difference between regression and classification problems.</strong></p>
+<p>Ding ding ding! This is the fundamental difference between regression and binary classification problems. In a binary classification problem, the cost function when the label is 1 is something like $-log(h_\theta)$ while when the label is 0 it's something like $-log(1-h_\theta)$. That is, if the true label $y$ is 1, the cost is zero (good!) if the prediction, $h_\theta$ is 1. However, the cost goes to infinity the farther from 1 (closer to zero) $h_\theta$ is. The opposite is true if the true label $y$ is 0. <strong>This is what constitutes the fundamental difference between regression and classification problems.</strong></p>
 </div>
 </div>
 </div>
@@ -583,15 +573,6 @@ M2sAB2wzM7MGcMA2MzNrAAdsMzOzBvgLoH3KThJ2dH0AAAAASUVORK5CYII=
 " />
 </div>
 </div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><img alt="Cost function for binary classification." src="images/classification_cost.png" /></p>
 </div>
 </div>
 </div>
