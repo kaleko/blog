@@ -1,0 +1,7 @@
+Title: Feature Engineering - Handling Cyclical Features
+Slug: feature-engineering-cyclical-features
+Date: 2017-10-30
+Tags: feature engineering, fundamentals, machinelearning, datetime
+Author: David Kaleko
+Summary: Many novices (myself included) are treating cyclical variables in their models incorrectly. Inspired by a tweet, I demonstrate how to transform cyclical variables (like hour of the day, month of the year) in the proper way. I show the predictive power of a simple neural network model on a public dataset improving after properly engineering these features.
+Headline: SOHCAHTOA amirite?
