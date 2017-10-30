@@ -180,12 +180,12 @@
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>I was browsing twitter yesterday (<a href="https://twitter.com/davidkaleko">follow me!</a>) when I came across <a href="https://twitter.com/BecomingDataSci/status/924814225637367808">this tweet</a> by <a href="https://twitter.com/BecomingDataSci">Data Science Renee</a> linking to <a href="https://medium.com/towards-data-science/top-6-errors-novice-machine-learning-engineers-make-e82273d394db">this Medium article</a> called "Top 6 Errors Novice Machine Learning Engineers Make" by <a href="https://medium.com/@cdossman">Christopher Dossman</a>. This drew my attention because I'm somewhat new to the field (and even if I weren't, it's always worth reviewing <a href="http://blog.davidkaleko.com/fundamentals-regression-classification.html">the fundamentals</a>). While I'm not guilty of all six novice mistakes, I'm certainly not innocent either. The most interesting mistake to me was</p>
+<p>I was browsing twitter yesterday (<a href="https://twitter.com/davidkaleko">follow me!</a>) when I came across <a href="https://twitter.com/BecomingDataSci/status/924814225637367808">this tweet</a> by <a href="https://twitter.com/BecomingDataSci">Data Science Renee</a> linking to <a href="https://medium.com/towards-data-science/top-6-errors-novice-machine-learning-engineers-make-e82273d394db">this Medium article</a> called "Top 6 Errors Novice Machine Learning Engineers Make" by <a href="https://medium.com/@cdossman">Christopher Dossman</a>. This drew my attention because I'm somewhat new to the field (and even if I weren't, it's always worth reviewing <a href="http://blog.davidkaleko.com/fundamentals-regression-classification.html">the fundamentals</a>). While I'm not guilty of all six novice mistakes, I'm certainly not innocent either. The most interesting mistake to me was:</p>
 <h2 id=""Not-properly-dealing-with-cyclical-features"">"Not properly dealing with cyclical features"<a class="anchor-link" href="#"Not-properly-dealing-with-cyclical-features"">¶</a></h2><p>Christopher writes:</p>
 <blockquote><p>Hours of the day, days of the week, months in a year, and wind direction are all examples of features that are cyclical. Many new machine learning engineers don’t think to convert these features into a representation that can preserve information such as hour 23 and hour 0 being close to each other and not far.</p>
 </blockquote>
-<p>Yup. I've tried to predict my fair share of quantities using cyclical features incorrectly. Christopher points out that proper handling of such features involves representing the cyclical coordinates as (x,y) coordinates on a circle. In this blog post, I'll explore this feature engineering task and see if it really improves the predictive capability of a simple model.</p>
-<p>To begin, let's download a public dataset that has some cyclical qualities. I found a bi<em>cycle</em> sharing dataset online (pardon the double entendre) which provides some basic features, with the aim of predicting how many bikes are being used at any given hour. Let's download, unzip, and have a quick look.</p>
+<p>Yup. I've tried to predict my fair share of quantities using cyclical features incorrectly. Christopher points out that proper handling of such features involves representing the cyclical features as (x,y) coordinates on a circle. In this blog post, I'll explore this feature engineering task and see if it really improves the predictive capability of a simple model.</p>
+<p>To begin, let's download a public dataset that has some cyclical qualities. I found a bi<em>cycle</em> sharing dataset online (pardon the double entendre) which includes some basic features, with the aim of predicting how many bikes are being used at any given hour. Let's download, unzip, and have a quick look.</p>
 </div>
 </div>
 </div>
@@ -207,7 +207,7 @@
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
                                  Dload  Upload   Total   Spent    Left  Speed
-100  273k  100  273k    0     0   274k      0 --:--:-- --:--:-- --:--:--  346k
+100  273k  100  273k    0     0   117k      0  0:00:02  0:00:02 --:--:--  117k
 Archive:  Bike-Sharing-Dataset.zip
   inflating: data/bike_sharing/Readme.txt  
   inflating: data/bike_sharing/day.csv  
@@ -323,7 +323,7 @@ Unique values of hour: [ 0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Now instead of hours extending from 0 to 23, we have two new features "hr_sin" and "hr_cos" which each extend from 0 to 1 and combine to have the nice cyclical qualities we're looking for.</p>
+<p>Now instead of hours extending from 0 to 23, we have two new features "hr_sin" and "hr_cos" which each extend from 0 to 1 and combine to have the nice cyclical characteristics we're after.</p>
 <p>The claim is that using this transform will improve the predictive performance of our models. Let's give it a shot!</p>
 </div>
 </div>
@@ -378,7 +378,7 @@ Unique values of hour: [ 0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18
 <div class="output">
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>CV Scoring Result: mean= -26214.8800553 std= 6579.39162142
+<pre>CV Scoring Result: mean= -30124.9185806 std= 14229.9514505
 </pre>
 </div>
 </div>
@@ -413,7 +413,7 @@ Unique values of hour: [ 0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18
 <div class="output">
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>CV Scoring Result: mean= -24049.6457467 std= 8723.14080772
+<pre>CV Scoring Result: mean= -24051.6344462 std= 8724.50277993
 </pre>
 </div>
 </div>
