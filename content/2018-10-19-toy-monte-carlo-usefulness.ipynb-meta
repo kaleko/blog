@@ -1,0 +1,7 @@
+Title: Why You Should Play With Darts
+Slug: playing-with-darts-monte-carlo
+Date: 2018-10-19
+Tags: monte carlo, darts, simulation, random number generator
+Author: David Kaleko
+Summary: I'm writing this blog post to convince you to start playing with your own darts to quickly solve problems and answer common questions. You can often use simple MC simulations to get approximate solutions much more quickly than if you had tried to rigorously solve the problem.
+Headline: Making a Case for Adding Monte Carlo Simulations to your Data Science Toolkit
